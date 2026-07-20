@@ -26,6 +26,7 @@
                 <th>Nome da atividade</th>
                 <th>Nota da atividade</th>
                 <th>Aprovado?</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -33,17 +34,33 @@
                 <td>Atividade 1</td>
                 <td>7</td>
                 <td><img src="./images/aprovado.png" alt="Emoji festejando"></td>
+                <td><button class="btn-delete">Apagar</button></td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td> Média final</td>
+                <td>Média final</td>
                 <td>7</td>
                 <td><span class="resultado aprovado">Aprovado</span></td>
+                <td><button id="btn-definir-media" class="btn-media">Definir Média</button></td>
             </tr>
         </tfoot>
     </table>
 </div>
+
+<!-- Modal para definir média -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Definir Média Desejada</h2>
+        <p>Digite a média que você deseja como referência:</p>
+        <input type="number" id="media-desejada" min="0" max="10" step="0.1" placeholder="Digite a média (ex: 7)">
+        <div class="modal-buttons">
+            <button id="btn-confirmar" class="btn-confirm">Confirmar</button>
+            <button id="btn-cancelar" class="btn-cancel">Cancelar</button>
+        </div>
+    </div>
+</div>
+
 <script src="./main.js"></script>
 </body>
 </html>
